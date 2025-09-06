@@ -1,0 +1,55 @@
+   
+    <input type="text" id="inputSearch" placeholder="Buscar tarea por título" #searchInput />
+    <button id="btnSearch" (click)="searchT(searchInput.value)">Buscar</button>
+
+   
+    <div class="add-container">
+
+     <div class="listTcontainer">
+
+        <h1>Tareas Encontradas</h1>
+
+        <ul class="list">
+            
+            @for (item of findTasks; track $index) {
+                
+             <li class="listElement"> 
+            <p><strong>📑Tarea {{$index + 1}}:</strong>
+            {{ item.titulo}}</p>
+            <p><strong>📆Fecha límite:</strong> {{ item.fecha }}</p>
+            <p><strong>❗Grado de Importancia:</strong> {{ item.gradoImportancia }}</p>      
+            <p><strong>📝Descripción: </strong> {{ item.descripcion}}</p>   
+            </li>
+
+            }
+
+        </ul>
+
+             </div>
+
+            <div class="add-container2">
+
+                 <div class="listTcontainer2">
+
+                <h1>Tareas agregadas</h1>
+
+                <ul class="list2">
+
+                    @for (item of tasks; track $index) {
+                     <li class="listElement2" [class.complete] = "completeTasks.includes($index)"> 
+                    <p><strong>📑Tarea {{$index + 1}}:</strong>
+                    {{ item.titulo}}</p>
+                    <p><strong>📆Fecha límite:</strong> {{ item.fecha }}</p>
+                    <p><strong>❗Grado de Importancia:</strong> {{ item.gradoImportancia }}</p>        
+                    <p><strong>📝Descripción: </strong> {{ item.descripcion}}</p>  
+                    
+                    }  
+
+              </ul>
+
+                      </div>
+
+                </div> 
+        </div>
+
+  

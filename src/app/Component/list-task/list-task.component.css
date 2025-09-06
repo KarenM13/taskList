@@ -1,0 +1,67 @@
+h1{
+    text-align: center;
+    color: white;
+}
+h3{
+    color: rgb(236, 18, 18);
+    text-align: center;
+}
+.listTcontainer{
+    justify-self: center;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    align-items: center;
+}
+
+.listTcontainer ul{
+    display: block;
+    width: 100%;
+    height: auto;
+    justify-items: left;
+    list-style: none;
+    overflow-y: scroll;
+    color: white;
+}
+
+.listElement{
+    background-color: rgba(10, 70, 133, 0.208);
+    box-shadow: 2px 2px 6px rgb(18, 1, 1);
+    border-radius: 10px;
+    width: 70%;
+    height: auto;
+    padding: 20px;
+    margin: 30px;
+   justify-content: left;
+}
+.listElement p{
+width: 100%;
+font-size: 1.3rem;
+ 
+}
+
+.listElement button{
+    margin: 5px;
+    padding: 5px;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 10px;
+    font-size: 2.1rem;
+    color: white;
+    background-color: #a6cdea00;
+    border: none;
+    cursor: pointer;
+}
+.complete{
+    background-color: rgb(54, 179, 56);
+    box-shadow: 2px 2px 6px rgb(18, 1, 1);
+    border-radius: 10px;
+    width: 70%;
+    height: auto;
+    padding: 20px;
+    margin: 30px;
+   justify-content: left;
+}
+.visible{
+    display: none;
+}

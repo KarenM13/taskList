@@ -1,0 +1,18 @@
+  <h1>LISTA DE TAREAS</h1>
+
+ <hr>
+ 
+ <div id="menuDiv">
+
+     <ul class="menuContainer" id="menu">
+   
+            @for (item of elementsOfMenu; track $index)
+             {
+
+            <a [routerLink]="item.routes" class="item-menu">
+                    <li><p class="icon">{{iconImg[$index]}}</p> {{item.name}}</li>
+                 </a> 
+                     
+                }
+          </ul> 
+      </div>

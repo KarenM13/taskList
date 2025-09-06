@@ -1,0 +1,27 @@
+
+
+
+   <div class="listTcontainer">
+
+    <h1>Tareas agregadas</h1>
+    <h3 [class.visible] = "ver">NO HAY TAREAS DISPONIBLES</h3>
+    <ul class="list">
+
+    @for (item of tasks; track $index) {
+    <li class="listElement" [class.complete] = "completeTasks.includes($index)"> 
+    <p><strong>📑Tarea {{$index + 1}}:</strong>
+    {{ item.titulo}}</p>
+    <p><strong>📆Fecha límite:</strong> {{ item.fecha }}</p>
+    <p><strong>❗Grado de Importancia:</strong> {{ item.gradoImportancia }}</p> 
+    <p><strong>📝Descripción: </strong> {{item.descripcion}}</p>  
+    <button (click)="marComplete($index)">✅</button>
+    <button (click)="goEdit(item, $index)">✏️</button>
+    <button (click)="delT($index)"> ❌</button>
+    
+    </li>  
+
+     }  
+
+    </ul>
+
+  </div>
